@@ -11,7 +11,7 @@ function App() {
 
     return (
         <div className="min-h-screen flex-col justify-center items-start">
-            <h1 className="text-3xl font-bold text-blue-600">
+            <h1 className="text-3xl font-bold text-blue-600" data-cy="title">
                 Unattended Test
             </h1>
             <div className="grid grid-cols-1">

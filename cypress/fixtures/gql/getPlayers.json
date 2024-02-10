@@ -1,0 +1,29 @@
+{
+    "data": {
+        "players": [
+            {
+                "id": "player-id",
+                "firstname": "Gael",
+                "lastname": "Monfils",
+                "sex": "MAN",
+                "shortname": "G.Monfils",
+                "picture": {
+                    "url": "https://i.eurosport.com/_iss_/person/pp_clubteam/large/325225.jpg"
+                },
+                "country": {
+                    "picture": {
+                        "url": "https://i.eurosport.com/_iss_/geo/country/flag/large/2213.png"
+                    },
+                    "code": "SUI"
+                },
+                "stats": {
+                    "rank": 21,
+                    "points": 1784,
+                    "weight": 81000,
+                    "height": 183,
+                    "age": 33
+                }
+            }
+        ]
+    }
+}
