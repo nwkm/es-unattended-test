@@ -14,7 +14,10 @@ const WinDetails = () => {
 
     return (
         <div className="w-full bg-green-300 flex flex-col rounded-lg shadow-lg p-3 border border-white">
-            <h3 className="text-gray-500 ml-10 text-left font-medium hidden md:block">
+            <h3
+                className="text-gray-500 ml-10 text-left font-medium hidden md:block"
+                data-cy="windetail-title"
+            >
                 Details of winning matches:
             </h3>
             <div className="grid grid-cols-4 gap-4">

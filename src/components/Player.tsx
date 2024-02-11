@@ -17,7 +17,7 @@ const Player = ({
     return (
         <Link
             className="mt-5 flex space-x-3"
-            to={`/${player.id}`}
+            to={`/players/${player.id}`}
             data-cy="player-link-container"
         >
             <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-lg shadow-lg p-3 max-w-xs md:max-w-xl border border-white bg-white">

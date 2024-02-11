@@ -7,13 +7,15 @@ describe('Test pages/PlayerList', () => {
             .should('have.text', 'Unattended Test');
     });
 
-    it('should displayer player link container', () => {
+    it('should display player link container', () => {
         cy.interceptGql('GetPlayers', 'getPlayers');
 
         cy.visit('/');
 
         cy.wait('@GetPlayers');
 
-        cy.get('[data-cy="player-link-container"]').should('exist');
+        cy.get('[data-cy="player-link-container"]')
+            .should('exist')
+            .should('have.length', 1);
     });
 });

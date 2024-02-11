@@ -9,7 +9,10 @@ const WinDetail = ({
 }) => {
     const { startTime, endTime, players } = match;
     return (
-        <div className="rounded-sm text-left flex flex-col bg-white shadow p-3 gap-2">
+        <div
+            className="rounded-sm text-left flex flex-col bg-white shadow p-3 gap-2"
+            data-cy="windetail"
+        >
             <p className="text-blue-600 font-semibold">Competition</p>
 
             <p className="text-sm text-gray-800 font-light">

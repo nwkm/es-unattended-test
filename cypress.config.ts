@@ -4,7 +4,8 @@ dotenv.config();
 
 export default defineConfig({
     e2e: {
-        baseUrl: 'http://localhost:5173',
+        video: false,
+        baseUrl: 'http://localhost:3301',
         env: {
             gqUrl: process.env.VITE_GRAPHQL_URL,
         },
