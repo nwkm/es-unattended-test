@@ -21,8 +21,13 @@ const WinDetail = ({
             <p className="text-sm text-gray-800 font-light">
                 End time: {dayjs(endTime).format('ddd DD/MM/YYYY HH:mm')}
             </p>
-            <p className="text-sm text-gray-800 font-light">Players:</p>
-            <ul className="text-gray-800 text-left list-none ml-10">
+            <p id="player-list" className="text-sm text-gray-800 font-light">
+                Players:
+            </p>
+            <ul
+                aria-labelledby="player-list"
+                className="text-gray-800 text-left list-none ml-10"
+            >
                 {players.map((p) => {
                     const player = allPlayers.find((ps) => ps.id === p.id);
                     return (

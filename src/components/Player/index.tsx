@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { displayHeight, displayWeight } from '../utils/helpers';
+import { displayHeight, displayWeight } from '../../utils/helpers';
 
 const Player = ({
     player,
@@ -24,7 +24,7 @@ const Player = ({
                 <div className="w-full md:w-1/3 grid place-items-start">
                     <img
                         src={picture.url}
-                        alt="tailwind logo"
+                        alt="player picture"
                         className="rounded-lg w-full h-[250px] min-w-[150px]"
                     />
                 </div>
@@ -39,10 +39,16 @@ const Player = ({
                             className="rounded w-8 h-5"
                         />
                     </div>
-                    <h3 className="text-gray-500 text-left font-medium hidden md:block">
+                    <h3
+                        id="stats-list"
+                        className="text-gray-500 text-left font-medium hidden md:block"
+                    >
                         Stats:
                     </h3>
-                    <ul className="text-gray-500 text-left list-disc ml-10">
+                    <ul
+                        aria-labelledby="stats-list"
+                        className="text-gray-500 text-left list-disc ml-10"
+                    >
                         <li>Age: {stats.age}</li>
                         <li>Rank: {stats.rank}</li>
                         <li>Points: {stats.points}</li>
@@ -50,14 +56,17 @@ const Player = ({
                         <li>Height: {displayHeight(stats.height)}</li>
                     </ul>
                     <div className="flex justify-between item-center">
-                        <h3 className="text-gray-500 text-left font-medium hidden md:block">
-                            Total matches played:
+                        <h3
+                            id="matches-list"
+                            className="text-gray-500 text-left font-medium hidden md:block"
+                        >
+                            Total of played matches: {totalMatches.length}
                         </h3>
-                        <p className="text-gray-500 text-left font-medium hidden md:block">
-                            {totalMatches.length}
-                        </p>
                     </div>
-                    <ul className="text-gray-500 text-left list-disc ml-10">
+                    <ul
+                        aria-labelledby="matches-list"
+                        className="text-gray-500 text-left list-disc ml-10"
+                    >
                         <li>Wins 🙌: {winningMatches.length}</li>
                         <li>
                             Loses 😭:{' '}
