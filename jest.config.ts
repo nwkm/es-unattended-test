@@ -7,6 +7,14 @@ export default {
             {
                 jsc: {
                     transform: {
+                        optimizer: {
+                            globals: {
+                                vars: {
+                                    'import.meta.env.VITE_GRAPHQL_URL':
+                                        "'https://kf9p4bkih6.execute-api.eu-west-1.amazonaws.com/dev'",
+                                },
+                            },
+                        },
                         react: {
                             runtime: 'automatic',
                         },

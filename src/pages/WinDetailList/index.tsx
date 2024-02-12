@@ -13,14 +13,17 @@ const WinDetails = () => {
     const winningMatches = matches.filter((m) => m.winner.id === params.id);
 
     return (
-        <div className="w-full bg-green-300 flex flex-col rounded-lg shadow-lg p-3 border border-white">
+        <div className="w-full  flex flex-col rounded-lg shadow-lg p-3">
             <h3
-                className="text-gray-500 ml-10 text-left font-medium hidden md:block"
+                className="text-white text-left font-medium hidden md:block"
                 data-cy="windetail-title"
             >
                 Details of winning matches:
             </h3>
-            <div className="grid grid-cols-4 gap-4">
+            <div
+                className="grid grid-cols-4 gap-4"
+                data-testid="windetail-list-container"
+            >
                 {winningMatches.map((match, idx) => {
                     return (
                         <WinDetail key={idx} match={match} players={players} />

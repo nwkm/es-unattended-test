@@ -25,7 +25,7 @@ export const matchesApi = createApi({
     endpoints: (builder) => ({
         getMatches: builder.query<
             { matches: TMatch[] },
-            { page?: number; filter?: { name?: string; status?: string } }
+            { filter?: { id?: string } }
         >({
             query: (args) => ({
                 document: matchesDocument,

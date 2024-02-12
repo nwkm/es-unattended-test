@@ -2,7 +2,7 @@ import { useGetPlayersQuery } from '../../api/players.api';
 import { useGetMatchesQuery } from '../../api/matches.api';
 import Player from '../../components/Player';
 
-function App() {
+const PlayerList = () => {
     const { data: playersData } = useGetPlayersQuery({});
     const { data: matchesData } = useGetMatchesQuery({});
 
@@ -14,13 +14,16 @@ function App() {
             <h1 className="text-3xl font-bold text-blue-600" data-cy="title">
                 Unattended Test
             </h1>
-            <div className="grid grid-cols-1">
+            <div
+                className="grid grid-cols-1"
+                data-testid="player-list-container"
+            >
                 {players.map((p) => (
                     <Player key={p.id} player={p} matches={matches} />
                 ))}
             </div>
         </div>
     );
-}
+};
 
-export default App;
+export default PlayerList;

@@ -38,7 +38,7 @@ export const playersApi = createApi({
     endpoints: (builder) => ({
         getPlayers: builder.query<
             { players: TPlayer[] },
-            { page?: number; filter?: { name?: string; status?: string } }
+            { filter?: { id?: string } }
         >({
             query: (args) => ({
                 document: playersDocument,
