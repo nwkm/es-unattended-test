@@ -9,7 +9,6 @@
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview",
         "test": "jest",
-        "coverage": "jest --coverage",
         "test:e2e": "cypress run --headed",
         "test:e2e-local": "./scripts/run-e2e-local.sh"
     },
